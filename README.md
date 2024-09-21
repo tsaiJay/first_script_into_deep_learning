@@ -1,2 +1,9 @@
 # first_script_into_deep_learning
-in pytorch
+use pytorch
+
+
+## mnist
+check different mlp performance on mnist dataset
+- 1 layer
+- 2 layer
+- 3 layer
