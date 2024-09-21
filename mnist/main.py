@@ -75,8 +75,8 @@ def main():
     trainset = torchvision.datasets.MNIST(root='./data', train=True, download=True, transform=train_transform)
     testset = torchvision.datasets.MNIST(root='./data', train=False, download=True, transform=test_transform)
 
-    trainloader = DataLoader(trainset, batch_size=batch_size, shuffle=True)
-    testloader = DataLoader(testset, batch_size=batch_size, shuffle=False)
+    trainloader = DataLoader(trainset, batch_size=batch_size, shuffle=True, num_workers=8)
+    testloader = DataLoader(testset, batch_size=batch_size, shuffle=False, num_workers=8)
 
     # net = LeNet().to(device)
     net = MLP().to(device)

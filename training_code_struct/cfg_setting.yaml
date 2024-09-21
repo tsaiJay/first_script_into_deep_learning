@@ -1,0 +1,31 @@
+project_name: 'LeNet_MNIST'
+run_id: '2'
+use_wandb: True
+record: True
+wandb_entity: 'tjproject'
+resume: False
+
+gpu_id: 0
+num_workers: 4
+num_epochs: 150
+train_batch_size: 128
+test_batch_size: 128
+dataset: 'mnist'
+data_path: '/data/dataSets/mnist'
+input_size: '32x32_2'
+
+model: 'lenet'      #使用的網路模型
+img_size: 32
+output_size: 10
+
+optimizer_type: 'SGD'
+learning_rate: 0.001
+weight_decay: 0.0001        # 0 means not using weight decay
+momentum: 0.9               # 0 means not using momentum
+lr_scheduler: 'none'
+# sche_step: 30
+# gamma: 0.1
+
+# update_freq: 1            #backward頻率
+log_freq: 64                #上傳頻率
+ckp_epochs: 3000            #save checkpoint every _ epochs
